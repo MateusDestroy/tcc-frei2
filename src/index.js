@@ -154,6 +154,16 @@ app.post('/produto', async (req, resp) => {
 
 
 
+app.get('/cupom', async (req, resp) => {
+
+
+    const data = await db.infoa_sti_cupom.findAll();
+
+    
+    resp.send(data);
+
+});
+
 
 app.get('/produto', async (req, resp) => {
 
